@@ -1,19 +1,21 @@
 ---
 title: "Garf's Analytics"
-output: html_notebook
+output:
+  html_document: default
+  html_notebook: default
 ---
 Load Packages
-```{r, include=FALSE}
+```{r}
 library(tidyverse)
 library(lubridate)
 ```
 
 Read in the data
-```{r, include=FALSE}
+```{r}
 garfs <- read_csv("Garfs CSV")
 ```
 Parse Dates
-```{r, include=FALSE}
+```{r}
 garfs$Date <- mdy(garfs$Date)
 ```
 
@@ -39,10 +41,6 @@ ggplot(data = garfs, aes(x = Date, y = Made)) +
 
     
 
-Test dates
-```{r}
-month(garfs)
-```
 
 
 
