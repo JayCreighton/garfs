@@ -25,10 +25,19 @@ str(garfs)
 ```{r}
 summary(garfs)
 ```
-```{r, echo=TRUE}
+
+```{r}
 head(garfs)
 ```
 
+Let's try plotting something
+
+```{r}
+ggplot(data = garfs, aes(x = Date, y = Made)) + 
+    geom_line()
+```
+
+    
 
 Test dates
 ```{r}
