@@ -1,0 +1,39 @@
+---
+title: "Garf's Analytics"
+output: html_notebook
+---
+Load Packages
+```{r, include=FALSE}
+library(tidyverse)
+library(lubridate)
+```
+
+Read in the data
+```{r, include=FALSE}
+garfs <- read_csv("Garfs CSV")
+```
+Parse Dates
+```{r, include=FALSE}
+garfs$Date <- mdy(garfs$Date)
+```
+
+Inspect
+```{r}
+str(garfs)
+```
+
+```{r}
+summary(garfs)
+```
+```{r, echo=TRUE}
+head(garfs)
+```
+
+
+Test dates
+```{r}
+month(garfs)
+```
+
+
+
